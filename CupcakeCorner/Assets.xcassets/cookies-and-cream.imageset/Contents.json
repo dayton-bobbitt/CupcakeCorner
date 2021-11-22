@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "cookies-and-cream.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject private var order = Order()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            HomeView(order: order)
+        }
     }
 }
 

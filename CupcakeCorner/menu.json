@@ -1,0 +1,66 @@
+{
+    "sizes": [
+        {
+            "id": "9e846176-1ada-4b34-a864-c96b09233fff",
+            "name": "individual",
+            "count": 1,
+            "price": 3.99
+        },
+        {
+            "id": "06485438-c350-4980-896e-e781d17ec3ae",
+            "name": "small",
+            "count": 2,
+            "price": 6.99
+        },
+        {
+            "id": "b257079f-e1c2-4969-80e7-1bf11417b9cf",
+            "name": "medium",
+            "count": 4,
+            "price": 12.99
+        },
+        {
+            "id": "38087030-babe-4695-afbb-eed4cbce64bc",
+            "name": "large",
+            "count": 6,
+            "price": 14.99
+        }
+    ],
+    "cupcakes": [
+        {
+            "id": "6588f6c6-f7fc-448d-8913-5999923d61a0",
+            "name": "Peanut Butter",
+            "imageName": "peanut-butter",
+            "customizations": [
+                "Add sprinkles"
+            ]
+        },
+        {
+            "id": "6e62bd5a-06ac-4ca1-b3b3-c81b382be2bd",
+            "name": "Chocolate Ganache",
+            "imageName": "chocolate-ganache",
+            "customizations": [
+                "Add sprinkles"
+            ]
+        },
+        {
+            "id": "5138fd50-c5a4-4635-a1ff-da6a3371e76a",
+            "name": "Cinnamon Sugar",
+            "imageName": "cinnamon-sugar"
+        },
+        {
+            "id": "f7405c1f-2265-4887-ab77-e4a3b89e2eb1",
+            "name": "Cookies & Cream",
+            "imageName": "cookies-and-cream"
+        },
+        {
+            "id": "59f1cc84-0edc-4f2d-8a3c-08cb296a5fdb",
+            "name": "Caramel Apple",
+            "imageName": "caramel-apple"
+        },
+        {
+            "id": "6a46036b-774b-4305-9b60-7ab36b1586f6",
+            "name": "Lemon",
+            "imageName": "lemon"
+        }
+    ]
+}

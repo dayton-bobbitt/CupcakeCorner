@@ -11,6 +11,22 @@
 		99944E852740697200D47921 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99944E842740697200D47921 /* ContentView.swift */; };
 		99944E872740697300D47921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99944E862740697300D47921 /* Assets.xcassets */; };
 		99944E8A2740697300D47921 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99944E892740697300D47921 /* Preview Assets.xcassets */; };
+		99A90CE6274B010A005BE6F3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90CE5274B010A005BE6F3 /* HomeView.swift */; };
+		99A90CE8274B0118005BE6F3 /* AmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90CE7274B0118005BE6F3 /* AmountView.swift */; };
+		99A90CEA274B0129005BE6F3 /* CupcakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90CE9274B0129005BE6F3 /* CupcakeView.swift */; };
+		99A90CEC274B0132005BE6F3 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90CEB274B0132005BE6F3 /* ReviewView.swift */; };
+		99A90CEE274B0141005BE6F3 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90CED274B0141005BE6F3 /* AddressView.swift */; };
+		99A90CF0274B0149005BE6F3 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90CEF274B0149005BE6F3 /* SuccessView.swift */; };
+		99A90CF2274B018A005BE6F3 /* CupcakePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90CF1274B018A005BE6F3 /* CupcakePickerView.swift */; };
+		99A90CF5274B03F2005BE6F3 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90CF4274B03F2005BE6F3 /* PrimaryButton.swift */; };
+		99A90CF8274B048D005BE6F3 /* View+Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90CF7274B048D005BE6F3 /* View+Buttons.swift */; };
+		99A90CFA274B052B005BE6F3 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90CF9274B052B005BE6F3 /* Order.swift */; };
+		99A90CFE274B08AF005BE6F3 /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = 99A90CFD274B08AF005BE6F3 /* menu.json */; };
+		99A90D00274B0C65005BE6F3 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90CFF274B0C65005BE6F3 /* Menu.swift */; };
+		99A90D02274B0C6F005BE6F3 /* Cupcake.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90D01274B0C6F005BE6F3 /* Cupcake.swift */; };
+		99A90D04274B0C86005BE6F3 /* BoxOfCupcakes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90D03274B0C86005BE6F3 /* BoxOfCupcakes.swift */; };
+		99A90D06274B11EE005BE6F3 /* NumberFormatter+formatCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90D05274B11EE005BE6F3 /* NumberFormatter+formatCurrency.swift */; };
+		99A90D08274B1351005BE6F3 /* TileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90D07274B1351005BE6F3 /* TileButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +35,22 @@
 		99944E842740697200D47921 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		99944E862740697300D47921 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99944E892740697300D47921 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		99A90CE5274B010A005BE6F3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		99A90CE7274B0118005BE6F3 /* AmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountView.swift; sourceTree = "<group>"; };
+		99A90CE9274B0129005BE6F3 /* CupcakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeView.swift; sourceTree = "<group>"; };
+		99A90CEB274B0132005BE6F3 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
+		99A90CED274B0141005BE6F3 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
+		99A90CEF274B0149005BE6F3 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		99A90CF1274B018A005BE6F3 /* CupcakePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakePickerView.swift; sourceTree = "<group>"; };
+		99A90CF4274B03F2005BE6F3 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
+		99A90CF7274B048D005BE6F3 /* View+Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Buttons.swift"; sourceTree = "<group>"; };
+		99A90CF9274B052B005BE6F3 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		99A90CFD274B08AF005BE6F3 /* menu.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
+		99A90CFF274B0C65005BE6F3 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		99A90D01274B0C6F005BE6F3 /* Cupcake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cupcake.swift; sourceTree = "<group>"; };
+		99A90D03274B0C86005BE6F3 /* BoxOfCupcakes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfCupcakes.swift; sourceTree = "<group>"; };
+		99A90D05274B11EE005BE6F3 /* NumberFormatter+formatCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+formatCurrency.swift"; sourceTree = "<group>"; };
+		99A90D07274B1351005BE6F3 /* TileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +83,13 @@
 		99944E812740697200D47921 /* CupcakeCorner */ = {
 			isa = PBXGroup;
 			children = (
+				99A90CF6274B0479005BE6F3 /* Extensions */,
+				99A90CF3274B03B2005BE6F3 /* Modifiers */,
+				99A90CE3274B00B8005BE6F3 /* Models */,
+				99A90CE4274B00C2005BE6F3 /* Views */,
 				99944E822740697200D47921 /* CupcakeCornerApp.swift */,
 				99944E842740697200D47921 /* ContentView.swift */,
+				99A90CFD274B08AF005BE6F3 /* menu.json */,
 				99944E862740697300D47921 /* Assets.xcassets */,
 				99944E882740697300D47921 /* Preview Content */,
 			);
@@ -65,6 +102,49 @@
 				99944E892740697300D47921 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		99A90CE3274B00B8005BE6F3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				99A90D03274B0C86005BE6F3 /* BoxOfCupcakes.swift */,
+				99A90D01274B0C6F005BE6F3 /* Cupcake.swift */,
+				99A90CFF274B0C65005BE6F3 /* Menu.swift */,
+				99A90CF9274B052B005BE6F3 /* Order.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		99A90CE4274B00C2005BE6F3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				99A90CE5274B010A005BE6F3 /* HomeView.swift */,
+				99A90CE7274B0118005BE6F3 /* AmountView.swift */,
+				99A90CE9274B0129005BE6F3 /* CupcakeView.swift */,
+				99A90CF1274B018A005BE6F3 /* CupcakePickerView.swift */,
+				99A90CEB274B0132005BE6F3 /* ReviewView.swift */,
+				99A90CED274B0141005BE6F3 /* AddressView.swift */,
+				99A90CEF274B0149005BE6F3 /* SuccessView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		99A90CF3274B03B2005BE6F3 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				99A90CF4274B03F2005BE6F3 /* PrimaryButton.swift */,
+				99A90D07274B1351005BE6F3 /* TileButton.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		99A90CF6274B0479005BE6F3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				99A90CF7274B048D005BE6F3 /* View+Buttons.swift */,
+				99A90D05274B11EE005BE6F3 /* NumberFormatter+formatCurrency.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99944E8A2740697300D47921 /* Preview Assets.xcassets in Resources */,
+				99A90CFE274B08AF005BE6F3 /* menu.json in Resources */,
 				99944E872740697300D47921 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +218,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A90CF0274B0149005BE6F3 /* SuccessView.swift in Sources */,
+				99A90D04274B0C86005BE6F3 /* BoxOfCupcakes.swift in Sources */,
+				99A90CF8274B048D005BE6F3 /* View+Buttons.swift in Sources */,
+				99A90CEE274B0141005BE6F3 /* AddressView.swift in Sources */,
+				99A90D08274B1351005BE6F3 /* TileButton.swift in Sources */,
+				99A90CF5274B03F2005BE6F3 /* PrimaryButton.swift in Sources */,
+				99A90D02274B0C6F005BE6F3 /* Cupcake.swift in Sources */,
+				99A90CE6274B010A005BE6F3 /* HomeView.swift in Sources */,
+				99A90CF2274B018A005BE6F3 /* CupcakePickerView.swift in Sources */,
+				99A90CFA274B052B005BE6F3 /* Order.swift in Sources */,
 				99944E852740697200D47921 /* ContentView.swift in Sources */,
+				99A90CE8274B0118005BE6F3 /* AmountView.swift in Sources */,
+				99A90D06274B11EE005BE6F3 /* NumberFormatter+formatCurrency.swift in Sources */,
+				99A90D00274B0C65005BE6F3 /* Menu.swift in Sources */,
+				99A90CEA274B0129005BE6F3 /* CupcakeView.swift in Sources */,
+				99A90CEC274B0132005BE6F3 /* ReviewView.swift in Sources */,
 				99944E832740697200D47921 /* CupcakeCornerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +370,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -285,7 +382,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,6 +399,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -313,7 +411,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
