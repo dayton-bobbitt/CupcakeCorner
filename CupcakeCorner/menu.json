@@ -1,36 +1,10 @@
 {
-    "sizes": [
-        {
-            "id": "9e846176-1ada-4b34-a864-c96b09233fff",
-            "name": "individual",
-            "count": 1,
-            "price": 3.99
-        },
-        {
-            "id": "06485438-c350-4980-896e-e781d17ec3ae",
-            "name": "small",
-            "count": 2,
-            "price": 6.99
-        },
-        {
-            "id": "b257079f-e1c2-4969-80e7-1bf11417b9cf",
-            "name": "medium",
-            "count": 4,
-            "price": 12.99
-        },
-        {
-            "id": "38087030-babe-4695-afbb-eed4cbce64bc",
-            "name": "large",
-            "count": 6,
-            "price": 14.99
-        }
-    ],
     "cupcakes": [
         {
             "id": "6588f6c6-f7fc-448d-8913-5999923d61a0",
             "name": "Peanut Butter",
             "imageName": "peanut-butter",
-            "customizations": [
+            "allowedCustomizations": [
                 "Add sprinkles"
             ]
         },
@@ -38,7 +12,7 @@
             "id": "6e62bd5a-06ac-4ca1-b3b3-c81b382be2bd",
             "name": "Chocolate Ganache",
             "imageName": "chocolate-ganache",
-            "customizations": [
+            "allowedCustomizations": [
                 "Add sprinkles"
             ]
         },

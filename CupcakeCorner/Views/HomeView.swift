@@ -20,7 +20,7 @@ struct HomeView: View {
             
             Spacer()
             
-            NavigationLink(destination: AmountView(order: order)) {
+            NavigationLink(destination: CupcakeView(order: order)) {
                 Text("Place an order")
                     .primaryButton()
             }

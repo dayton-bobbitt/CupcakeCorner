@@ -8,7 +8,6 @@
 import Foundation
 
 struct Menu: Codable {
-    let sizes: [BoxOfCupcakes]
     let cupcakes: [Cupcake]
     
     static func load() -> Menu {

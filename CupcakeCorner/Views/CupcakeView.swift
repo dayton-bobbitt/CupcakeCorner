@@ -9,46 +9,80 @@ import SwiftUI
 
 struct CupcakeView: View {
     @ObservedObject var order: Order
-    @State private var showCupcakePicker = false
+    @State private var cupcakePickerIsPresented = false
     
     private let columns: [GridItem] = Array(repeating: .init(.flexible(), spacing: 16), count: 2)
     
     var body: some View {
         VStack {
-            ScrollView {
-                GeometryReader { geo in
+            GeometryReader { geo in
+                ScrollView {
                     LazyVGrid(columns: columns, spacing: 16) {
-                        if let numberOfCupcakes = order.size?.count {
-                            ForEach(0..<numberOfCupcakes) { cupcakeIndex in
-                                // TODO: show image of cupcake if one is selected for index
-                                Image("cupcake-icon")
+                        ForEach(order.cart) { cartItem in
+                            ZStack {
+                                Image(cartItem.cupcake.imageName)
                                     .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 40, height: 40)
-                                    .frame(maxWidth: .infinity, maxHeight: .infinity)
-                                    .tileButton()
+                                    .scaledToFill()
                                     .frame(height: geo.size.width / 2)
-                                    .onTapGesture {
-                                        showCupcakePicker = true
+                                    .clipShape(RoundedRectangle(cornerRadius: 12))
+                                    .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color("SecondaryColor"), lineWidth: 3))
+                                
+                                VStack {
+                                    HStack {
+                                        Spacer()
+                                        
+                                        Image(systemName: "xmark.circle.fill")
+                                            .font(.title2)
+                                            .padding(10)
+                                            .onTapGesture {
+                                                withAnimation(.easeInOut(duration: 0.25)) {
+                                                    order.remove(cartItem: cartItem)
+                                                }
+                                            }
                                     }
-                                    .sheet(isPresented: $showCupcakePicker) {
-                                        // TODO: pass closure to store selection
-                                        CupcakePickerView(order: order)
-                                    }
+                                    
+                                    Spacer()
+                                }
+                                
+                                ZStack {
+                                    Circle()
+                                        .foregroundColor(Color("SecondaryColor"))
+                                        .frame(width: 80, height: 80)
+                                    
+                                    Image(systemName: "\(cartItem.quantity).circle.fill")
+                                        .resizable()
+                                        .scaledToFill()
+                                    .frame(width: 64, height: 64)
+                                }
                             }
                         }
+                        
+                        Image(systemName: "plus")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
+                            .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .foregroundColor(Color("PrimaryColor"))
+                            .tileButton()
+                            .frame(height: geo.size.width / 2)
+                            .onTapGesture {
+                                cupcakePickerIsPresented.toggle()
+                            }
+                    }
+                    .padding()
+                    .sheet(isPresented: $cupcakePickerIsPresented) {
+                        CupcakePickerView(order: order)
                     }
                 }
-                .padding(.horizontal)
             }
             
             NavigationLink(destination: ReviewView(order: order)) {
                 Text("Next")
                     .primaryButton()
             }
-            .padding(.horizontal)
+            .padding()
         }
-        .navigationTitle("Select cupcakes")
+        .navigationTitle("Add cupcakes")
     }
 }
 
@@ -56,8 +90,10 @@ struct CupcakeView_Previews: PreviewProvider {
     static var previews: some View {
         let order: Order = {
             let order = Order()
+            let cupcake = Cupcake(id: UUID(), name: "Test", imageName: "peanut-butter", allowedCustomizations: nil, chosenCustomization: nil)
+            let cartItem = CartItem(cupcake: cupcake, quantity: 2)
             
-            order.size = .init(id: UUID(), name: "test", count: 4, price: 99)
+            order.cart.append(cartItem)
             
             return order
         }()

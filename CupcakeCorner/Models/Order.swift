@@ -9,10 +9,16 @@ import Foundation
 
 class Order: ObservableObject {
     let menu = Menu.load()
-    
-    @Published var size: BoxOfCupcakes?
+
+    @Published var cart = [CartItem]()
     
     func reset() {
-        size = nil
+        cart = []
+    }
+    
+    func remove(cartItem: CartItem) {
+        if let cartItemIndex = cart.firstIndex(where: { $0 == cartItem }) {
+            cart.remove(at: cartItemIndex)
+        }
     }
 }
