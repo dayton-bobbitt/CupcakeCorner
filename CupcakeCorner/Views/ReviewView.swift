@@ -11,6 +11,7 @@ struct ReviewView: View {
     @ObservedObject var order: Order
     
     @State private var addressViewIsPresented = false
+    @State private var successViewIsActive = false
     
     var body: some View {
         VStack {
@@ -95,7 +96,9 @@ struct ReviewView: View {
                 }
             }
             
-            NavigationLink(destination: SuccessView(order: order)) {
+            NavigationLink(destination: SuccessView(order: order), isActive: $successViewIsActive) { }
+            
+            Button(action: submit) {
                 Text("Submit")
                     .primaryButton()
             }
@@ -117,6 +120,16 @@ struct ReviewView: View {
     private func showAddressView() {
         self.addressViewIsPresented = true
     }
+    
+    private func submit() {
+        do {
+            try order.submit(onSuccess: {
+                self.successViewIsActive = true
+            }, onError: { _ in })
+        } catch {
+            print(error)
+        }
+    }
 }
 
 struct ReviewView_Previews: PreviewProvider {
@@ -124,10 +137,10 @@ struct ReviewView_Previews: PreviewProvider {
         let order: Order = {
             let order = Order()
             let cupcake1 = Cupcake(id: UUID(), name: "Peanut butter", imageName: "peanut-butter", price: 2.99)
-            let cartItem1 = CartItem(cupcake: cupcake1, quantity: 1)
+            let cartItem1 = CartItem(id: UUID(), cupcake: cupcake1, quantity: 1)
             
             let cupcake2 = Cupcake(id: UUID(), name: "Chocolate ganache", imageName: "chocolate-ganache", price: 2.99)
-            let cartItem2 = CartItem(cupcake: cupcake2, quantity: 2)
+            let cartItem2 = CartItem(id: UUID(), cupcake: cupcake2, quantity: 2)
             
             order.cart.append(cartItem1)
             order.cart.append(cartItem2)
@@ -138,10 +151,10 @@ struct ReviewView_Previews: PreviewProvider {
         let orderWithDeliveryAddress: Order = {
             let order = Order()
             let cupcake1 = Cupcake(id: UUID(), name: "Peanut butter", imageName: "peanut-butter", price: 2.99)
-            let cartItem1 = CartItem(cupcake: cupcake1, quantity: 1)
+            let cartItem1 = CartItem(id: UUID(), cupcake: cupcake1, quantity: 1)
             
             let cupcake2 = Cupcake(id: UUID(), name: "Chocolate ganache", imageName: "chocolate-ganache", price: 2.99)
-            let cartItem2 = CartItem(cupcake: cupcake2, quantity: 2)
+            let cartItem2 = CartItem(id: UUID(), cupcake: cupcake2, quantity: 2)
             
             order.cart.append(cartItem1)
             order.cart.append(cartItem2)

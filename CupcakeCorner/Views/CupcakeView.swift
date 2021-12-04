@@ -91,7 +91,7 @@ struct CupcakeView_Previews: PreviewProvider {
         let order: Order = {
             let order = Order()
             let cupcake = Cupcake(id: UUID(), name: "Peanut butter", imageName: "peanut-butter", price: 2.99)
-            let cartItem = CartItem(cupcake: cupcake, quantity: 2)
+            let cartItem = CartItem(id: UUID(), cupcake: cupcake, quantity: 2)
             
             order.cart.append(cartItem)
             

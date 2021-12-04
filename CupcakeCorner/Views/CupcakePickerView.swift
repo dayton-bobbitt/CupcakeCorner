@@ -75,7 +75,7 @@ struct CupcakePickerView: View {
                             Stepper("Quantity: \(quantity)", value: $quantity, in: 1...12)
                             
                             Button {
-                                onSelect(.init(cupcake: cupcake, quantity: quantity))
+                                onSelect(.init(id: UUID(), cupcake: cupcake, quantity: quantity))
                             } label: {
                                 Text("Select")
                                     .primaryButton()

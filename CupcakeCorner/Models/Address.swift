@@ -14,4 +14,8 @@ struct Address: Codable {
     let city: String
     let state: String
     let zip: String
+    
+    var isValid: Bool {
+        !(fullName.isEmpty || streetLine1.isEmpty || city.isEmpty || state.isEmpty || zip.isEmpty)
+    }
 }
