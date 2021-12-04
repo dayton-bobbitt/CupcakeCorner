@@ -26,6 +26,7 @@
 		99A90D06274B11EE005BE6F3 /* NumberFormatter+formatCurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90D05274B11EE005BE6F3 /* NumberFormatter+formatCurrency.swift */; };
 		99A90D08274B1351005BE6F3 /* TileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90D07274B1351005BE6F3 /* TileButton.swift */; };
 		99E1FBD02755246B00197004 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E1FBCF2755246A00197004 /* CartItem.swift */; };
+		99E1FBD22756FB3000197004 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E1FBD12756FB3000197004 /* Address.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		99A90D05274B11EE005BE6F3 /* NumberFormatter+formatCurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+formatCurrency.swift"; sourceTree = "<group>"; };
 		99A90D07274B1351005BE6F3 /* TileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileButton.swift; sourceTree = "<group>"; };
 		99E1FBCF2755246A00197004 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		99E1FBD12756FB3000197004 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		99A90CE3274B00B8005BE6F3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				99E1FBD12756FB3000197004 /* Address.swift */,
 				99E1FBCF2755246A00197004 /* CartItem.swift */,
 				99A90D01274B0C6F005BE6F3 /* Cupcake.swift */,
 				99A90CFF274B0C65005BE6F3 /* Menu.swift */,
@@ -227,6 +230,7 @@
 				99A90CFA274B052B005BE6F3 /* Order.swift in Sources */,
 				99944E852740697200D47921 /* ContentView.swift in Sources */,
 				99A90D06274B11EE005BE6F3 /* NumberFormatter+formatCurrency.swift in Sources */,
+				99E1FBD22756FB3000197004 /* Address.swift in Sources */,
 				99A90D00274B0C65005BE6F3 /* Menu.swift in Sources */,
 				99A90CEA274B0129005BE6F3 /* CupcakeView.swift in Sources */,
 				99A90CEC274B0132005BE6F3 /* ReviewView.swift in Sources */,
