@@ -14,6 +14,7 @@ struct ContentView: View {
         NavigationView {
             HomeView(order: order)
         }
+        .navigationViewStyle(.stack)
     }
 }
 
