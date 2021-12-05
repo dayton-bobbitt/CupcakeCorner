@@ -99,6 +99,8 @@ struct CupcakeView_Previews: PreviewProvider {
             return order
         }()
         
-        CupcakeView(order: order)
+        NavigationView {
+            CupcakeView(order: order)
+        }
     }
 }

@@ -172,7 +172,12 @@ struct ReviewView_Previews: PreviewProvider {
             return order
         }()
         
-        ReviewView(order: order)
-        ReviewView(order: orderWithDeliveryAddress)
+        NavigationView {
+            ReviewView(order: order)
+        }
+        
+        NavigationView {        
+            ReviewView(order: orderWithDeliveryAddress)
+        }
     }
 }
