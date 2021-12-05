@@ -106,6 +106,7 @@ struct ReviewView: View {
                     Text("Submit")
                         .primaryButton()
                 }
+                .disabled(!(order.isValidCart && order.isValidDeliveryAddress))
                 .padding()
             }
         }

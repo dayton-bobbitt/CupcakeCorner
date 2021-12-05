@@ -80,6 +80,7 @@ struct CupcakeView: View {
                 Text("Next")
                     .primaryButton()
             }
+            .disabled(!order.isValidCart)
             .padding()
         }
         .navigationTitle("Add cupcakes")
