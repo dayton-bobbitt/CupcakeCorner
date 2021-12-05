@@ -11,7 +11,6 @@
 		99944E852740697200D47921 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99944E842740697200D47921 /* ContentView.swift */; };
 		99944E872740697300D47921 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99944E862740697300D47921 /* Assets.xcassets */; };
 		99944E8A2740697300D47921 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99944E892740697300D47921 /* Preview Assets.xcassets */; };
-		99A90CE6274B010A005BE6F3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90CE5274B010A005BE6F3 /* HomeView.swift */; };
 		99A90CEA274B0129005BE6F3 /* CupcakeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90CE9274B0129005BE6F3 /* CupcakeView.swift */; };
 		99A90CEC274B0132005BE6F3 /* ReviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90CEB274B0132005BE6F3 /* ReviewView.swift */; };
 		99A90CEE274B0141005BE6F3 /* AddressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90CED274B0141005BE6F3 /* AddressView.swift */; };
@@ -27,6 +26,7 @@
 		99A90D08274B1351005BE6F3 /* TileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99A90D07274B1351005BE6F3 /* TileButton.swift */; };
 		99E1FBD02755246B00197004 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E1FBCF2755246A00197004 /* CartItem.swift */; };
 		99E1FBD22756FB3000197004 /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E1FBD12756FB3000197004 /* Address.swift */; };
+		99E1FBD4275CF57900197004 /* EnvironmentValues+RootPresentationMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E1FBD3275CF57900197004 /* EnvironmentValues+RootPresentationMode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,6 @@
 		99944E842740697200D47921 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		99944E862740697300D47921 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		99944E892740697300D47921 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		99A90CE5274B010A005BE6F3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		99A90CE9274B0129005BE6F3 /* CupcakeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupcakeView.swift; sourceTree = "<group>"; };
 		99A90CEB274B0132005BE6F3 /* ReviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewView.swift; sourceTree = "<group>"; };
 		99A90CED274B0141005BE6F3 /* AddressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressView.swift; sourceTree = "<group>"; };
@@ -51,6 +50,7 @@
 		99A90D07274B1351005BE6F3 /* TileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TileButton.swift; sourceTree = "<group>"; };
 		99E1FBCF2755246A00197004 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
 		99E1FBD12756FB3000197004 /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		99E1FBD3275CF57900197004 /* EnvironmentValues+RootPresentationMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentValues+RootPresentationMode.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +119,6 @@
 		99A90CE4274B00C2005BE6F3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				99A90CE5274B010A005BE6F3 /* HomeView.swift */,
 				99A90CE9274B0129005BE6F3 /* CupcakeView.swift */,
 				99A90CF1274B018A005BE6F3 /* CupcakePickerView.swift */,
 				99A90CEB274B0132005BE6F3 /* ReviewView.swift */,
@@ -143,6 +142,7 @@
 			children = (
 				99A90CF7274B048D005BE6F3 /* View+Buttons.swift */,
 				99A90D05274B11EE005BE6F3 /* NumberFormatter+formatCurrency.swift */,
+				99E1FBD3275CF57900197004 /* EnvironmentValues+RootPresentationMode.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -225,11 +225,11 @@
 				99A90D08274B1351005BE6F3 /* TileButton.swift in Sources */,
 				99A90CF5274B03F2005BE6F3 /* PrimaryButton.swift in Sources */,
 				99A90D02274B0C6F005BE6F3 /* Cupcake.swift in Sources */,
-				99A90CE6274B010A005BE6F3 /* HomeView.swift in Sources */,
 				99A90CF2274B018A005BE6F3 /* CupcakePickerView.swift in Sources */,
 				99A90CFA274B052B005BE6F3 /* Order.swift in Sources */,
 				99944E852740697200D47921 /* ContentView.swift in Sources */,
 				99A90D06274B11EE005BE6F3 /* NumberFormatter+formatCurrency.swift in Sources */,
+				99E1FBD4275CF57900197004 /* EnvironmentValues+RootPresentationMode.swift in Sources */,
 				99E1FBD22756FB3000197004 /* Address.swift in Sources */,
 				99A90D00274B0C65005BE6F3 /* Menu.swift in Sources */,
 				99A90CEA274B0129005BE6F3 /* CupcakeView.swift in Sources */,

@@ -10,9 +10,24 @@ import SwiftUI
 struct SuccessView: View {
     @ObservedObject var order: Order
     
+    @Environment(\.rootPresentationMode) var rootPresentationMode
+    
     var body: some View {
         VStack {
+            Spacer()
+            
             Text("We received your order and will get to work on those fake cupcakes right away.")
+            
+            Spacer()
+            
+            Button {
+                rootPresentationMode.wrappedValue.dismiss()
+            } label: {
+                Text("Done")
+                    .primaryButton()
+            }
+            .padding()
+
         }
         .navigationTitle("All done!")
         .navigationBarBackButtonHidden(true)
