@@ -12,97 +12,102 @@ struct ReviewView: View {
     
     @State private var addressViewIsPresented = false
     @State private var successViewIsActive = false
+    @State private var isSubmitting = false
     
     var body: some View {
         VStack {
-            ScrollView {
-                VStack(alignment: .leading, spacing: 12) {
-                    Text("Cupcakes")
-                        .font(.title2)
-                    
-                    Divider()
-                    
-                    ForEach(order.cart) { cartItem in
-                        HStack {
-                            Text(cartItem.cupcake.name)
-                            
-                            Spacer()
-                            
-                            Text(getPrice(for: cartItem))
-                        }
-                        
-                        Divider()
-                    }
-                    
-                    VStack(spacing: 8) {
-                        HStack {
-                            Text("Subtotal")
-                            Spacer()
-                            Text(NumberFormatter.formatCurrency(order.subtotal))
-                        }
-                        
-                        HStack {
-                            Text("Tax")
-                            Spacer()
-                            Text(NumberFormatter.formatCurrency(order.tax))
-                        }
-                        
-                        HStack {
-                            Text("Total")
-                            Spacer()
-                            Text(NumberFormatter.formatCurrency(order.total))
-                        }
-                        .font(.headline)
-                    }
-                }
-                .padding(.horizontal)
-                
-                VStack(alignment: .leading, spacing: 8) {
-                    Text("Delivery address")
-                        .font(.title2)
-                    
-                    if let address = order.deliveryAddress {
-                        HStack {
-                            VStack(alignment: .leading, spacing: 4) {
-                                Text(address.fullName)
-                                Text(address.streetLine1)
-                                
-                                if let streetLine2 = address.streetLine2, !streetLine2.isEmpty {
-                                    Text(streetLine2)
-                                }
-                                
-                                Text("\(address.city), \(address.state) \(address.zip)")
-                                
-                            }
-                            
-                            Spacer()
-                            
-                            Button(action: showAddressView) {
-                                Text("Edit")
-                            }
-                        }
-                        .padding()
-                        .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color("SecondaryColor"), lineWidth: 2))
-                    } else {
-                        Button(action: showAddressView) {
-                            Text("Add a delivery address")
-                        }
-                    }
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding([.horizontal, .top])
-                .sheet(isPresented: $addressViewIsPresented) {
-                    AddressView(order: order)
-                }
-            }
-            
             NavigationLink(destination: SuccessView(order: order), isActive: $successViewIsActive) { }
             
-            Button(action: submit) {
-                Text("Submit")
-                    .primaryButton()
+            if isSubmitting {
+                ProgressView()
+            } else {
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 12) {
+                        Text("Cupcakes")
+                            .font(.title2)
+                        
+                        Divider()
+                        
+                        ForEach(order.cart) { cartItem in
+                            HStack {
+                                Text(cartItem.cupcake.name)
+                                
+                                Spacer()
+                                
+                                Text(getPrice(for: cartItem))
+                            }
+                            
+                            Divider()
+                        }
+                        
+                        VStack(spacing: 8) {
+                            HStack {
+                                Text("Subtotal")
+                                Spacer()
+                                Text(NumberFormatter.formatCurrency(order.subtotal))
+                            }
+                            
+                            HStack {
+                                Text("Tax")
+                                Spacer()
+                                Text(NumberFormatter.formatCurrency(order.tax))
+                            }
+                            
+                            HStack {
+                                Text("Total")
+                                Spacer()
+                                Text(NumberFormatter.formatCurrency(order.total))
+                            }
+                            .font(.headline)
+                        }
+                    }
+                    .padding(.horizontal)
+                    
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Delivery address")
+                            .font(.title2)
+                        
+                        if let address = order.deliveryAddress {
+                            HStack {
+                                VStack(alignment: .leading, spacing: 4) {
+                                    Text(address.fullName)
+                                    Text(address.streetLine1)
+                                    
+                                    if let streetLine2 = address.streetLine2, !streetLine2.isEmpty {
+                                        Text(streetLine2)
+                                    }
+                                    
+                                    Text("\(address.city), \(address.state) \(address.zip)")
+                                    
+                                }
+                                
+                                Spacer()
+                                
+                                Button(action: showAddressView) {
+                                    Text("Edit")
+                                }
+                            }
+                            .padding()
+                            .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color("SecondaryColor"), lineWidth: 2))
+                        } else {
+                            Button(action: showAddressView) {
+                                Text("Add a delivery address")
+                            }
+                        }
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding([.horizontal, .top])
+                    .sheet(isPresented: $addressViewIsPresented) {
+                        AddressView(order: order)
+                    }
+                }
+                
+                Button(action: submit) {
+                    Text("Submit")
+                        .primaryButton()
+                }
+                .padding()
             }
-            .padding()
         }
         .navigationTitle("Review your order")
     }
@@ -122,6 +127,8 @@ struct ReviewView: View {
     }
     
     private func submit() {
+        isSubmitting = true
+        
         do {
             try order.submit(onSuccess: {
                 self.successViewIsActive = true
