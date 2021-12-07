@@ -9,7 +9,9 @@ import SwiftUI
 
 struct CupcakeView: View {
     @ObservedObject var order: Order
+    @Environment(\.rootPresentationMode) var rootPresentationMode
     @State private var cupcakePickerIsPresented = false
+    @State private var cancelOrderAlertIsPresented = false
     
     private let columns: [GridItem] = Array(repeating: .init(.flexible(), spacing: 16), count: 2)
     
@@ -84,6 +86,29 @@ struct CupcakeView: View {
             .padding()
         }
         .navigationTitle("Add cupcakes")
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button {
+                    self.cancelOrderAlertIsPresented = true
+                } label: {
+                    Text("Cancel")
+                        .tertiaryButton()
+                }
+            }
+        }
+        .alert(isPresented: $cancelOrderAlertIsPresented) {
+            Alert(
+                title: Text("Are you sure?"),
+                message: Text("Your progress will be lost"),
+                primaryButton: .default(Text("No, go back"), action: {
+                    self.cancelOrderAlertIsPresented = false
+                }),
+                secondaryButton: .destructive(Text("Yes, cancel"), action: {
+                    self.rootPresentationMode.wrappedValue.dismiss()
+                })
+            )
+        }
     }
 }
 
