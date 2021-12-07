@@ -13,13 +13,13 @@ struct ContentView: View {
     @State private var isOrdering = false
     
     var body: some View {
-        NavigationView {
+        NavigationViewWithBackground {
             VStack(alignment: .leading) {
                 Spacer()
                 
                 Text("Cupcake\nCorner")
                     .font(.largeTitle)
-                    .foregroundColor(Color("PrimaryColor"))
+                    .foregroundColor(Color("ColorTextLargeTitle"))
                 
                 Spacer()
                 
@@ -31,7 +31,7 @@ struct ContentView: View {
                     Text("Place an order")
                         .primaryButton()
                 }
-
+                
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding()
@@ -48,5 +48,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        
+        ContentView()
+            .preferredColorScheme(.dark)
     }
 }

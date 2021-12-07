@@ -36,8 +36,13 @@ struct SuccessView: View {
 
 struct SuccessView_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {        
+        NavigationViewWithBackground {
             SuccessView(order: Order())
         }
+        
+        NavigationViewWithBackground {
+            SuccessView(order: Order())
+        }
+        .preferredColorScheme(.dark)
     }
 }

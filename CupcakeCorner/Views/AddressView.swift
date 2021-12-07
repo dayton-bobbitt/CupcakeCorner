@@ -33,7 +33,7 @@ struct AddressView: View {
     }
     
     var body: some View {
-        NavigationView {
+        NavigationViewWithBackground {
             ScrollView {
                 VStack {
                     TextField("Full name", text: $fullName)
@@ -56,12 +56,14 @@ struct AddressView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: dismiss) {
                         Text("Cancel")
+                            .tertiaryButton()
                     }
                 }
                 
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: saveAddress) {
                         Text("Done")
+                            .tertiaryButton()
                             .disabled(!isFormValid)
                     }
                 }
@@ -91,5 +93,8 @@ struct AddressView: View {
 struct AddressView_Previews: PreviewProvider {
     static var previews: some View {
         AddressView(order: Order())
+        
+        AddressView(order: Order())
+            .preferredColorScheme(.dark)
     }
 }

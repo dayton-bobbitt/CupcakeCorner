@@ -15,7 +15,7 @@ struct CupcakePickerView: View {
     @State private var selectedCupcake: Cupcake? = nil
     
     var body: some View {
-        NavigationView {
+        NavigationViewWithBackground {
             GeometryReader { geo in
                 ScrollView {
                     VStack(spacing: 16) {
@@ -23,8 +23,6 @@ struct CupcakePickerView: View {
                             Image(cupcake.imageName)
                                 .resizable()
                                 .scaledToFill()
-                            // TODO: how can I restrict height without messing up touch events?
-                            // .frame(height: geo.size.width)
                                 .cornerRadius(12)
                                 .overlay(
                                     CupcakePickerCustomizationView(cupcake: cupcake, selectedCupcake: $selectedCupcake) { cartItem in
@@ -45,6 +43,7 @@ struct CupcakePickerView: View {
                         presentationMode.wrappedValue.dismiss()
                     } label: {
                         Image(systemName: "xmark")
+                            .tertiaryButton()
                     }
                 }
             }

@@ -61,7 +61,7 @@ struct ReviewView: View {
                             .font(.headline)
                         }
                     }
-                    .padding(.horizontal)
+                    .padding()
                     
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Delivery address")
@@ -85,6 +85,7 @@ struct ReviewView: View {
                                 
                                 Button(action: showAddressView) {
                                     Text("Edit")
+                                        .tertiaryButton()
                                 }
                             }
                             .padding()
@@ -92,6 +93,7 @@ struct ReviewView: View {
                         } else {
                             Button(action: showAddressView) {
                                 Text("Add a delivery address")
+                                    .tertiaryButton()
                             }
                         }
                     }
@@ -172,12 +174,23 @@ struct ReviewView_Previews: PreviewProvider {
             return order
         }()
         
-        NavigationView {
+        NavigationViewWithBackground {
             ReviewView(order: order)
         }
         
-        NavigationView {        
+        NavigationViewWithBackground {
             ReviewView(order: orderWithDeliveryAddress)
         }
+        
+        Group {
+            NavigationViewWithBackground {
+                ReviewView(order: order)
+            }
+            
+            NavigationViewWithBackground {
+                ReviewView(order: orderWithDeliveryAddress)
+            }
+        }
+        .preferredColorScheme(.dark)
     }
 }

@@ -12,6 +12,10 @@ extension View {
         modifier(PrimaryButton())
     }
     
+    func tertiaryButton() -> some View {
+        modifier(TertiaryButton())
+    }
+    
     func tileButton() -> some View {
         modifier(TileButton())
     }

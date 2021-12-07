@@ -99,8 +99,13 @@ struct CupcakeView_Previews: PreviewProvider {
             return order
         }()
         
-        NavigationView {
+        NavigationViewWithBackground {
             CupcakeView(order: order)
         }
+        
+        NavigationViewWithBackground {
+            CupcakeView(order: order)
+        }
+        .preferredColorScheme(.dark)
     }
 }
