@@ -33,13 +33,13 @@ struct PrimaryButton: ViewModifier {
 
 struct PrimaryButton_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationViewWithBackground {
+        NavigationView {
             Text("My primary button")
                 .modifier(PrimaryButton())
                 .padding()
         }
         
-        NavigationViewWithBackground {
+        NavigationView {
             Text("My primary button")
                 .modifier(PrimaryButton())
                 .disabled(true)
@@ -47,13 +47,13 @@ struct PrimaryButton_Previews: PreviewProvider {
         }
         
         Group {
-            NavigationViewWithBackground {
+            NavigationView {
                 Text("My primary button")
                     .modifier(PrimaryButton())
                     .padding()
             }
             
-            NavigationViewWithBackground {
+            NavigationView {
                 Text("My primary button")
                     .modifier(PrimaryButton())
                     .disabled(true)

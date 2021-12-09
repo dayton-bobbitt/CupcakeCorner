@@ -33,7 +33,7 @@ struct AddressView: View {
     }
     
     var body: some View {
-        NavigationViewWithBackground {
+        NavigationView {
             ScrollView {
                 VStack {
                     TextField("Full name", text: $fullName)

@@ -164,20 +164,20 @@ struct ReviewView_Previews: PreviewProvider {
             return order
         }()
         
-        NavigationViewWithBackground {
+        NavigationView {
             ReviewView(order: order)
         }
         
-        NavigationViewWithBackground {
+        NavigationView {
             ReviewView(order: orderWithDeliveryAddress)
         }
         
         Group {
-            NavigationViewWithBackground {
+            NavigationView {
                 ReviewView(order: order)
             }
             
-            NavigationViewWithBackground {
+            NavigationView {
                 ReviewView(order: orderWithDeliveryAddress)
             }
         }

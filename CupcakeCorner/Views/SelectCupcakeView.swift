@@ -46,8 +46,8 @@ struct SelectCupcakeView: View {
                 VStack {
                     Spacer()
                     if !order.cart.isEmpty {
-                        NavigationLink(destination: ReviewView(order: order)) {
-                            Text("Checkout")
+                        NavigationLink(destination: CartView(order: order)) {
+                            Text("View cart")
                                 .floatingButton()
                                 .padding()
                         }
@@ -99,11 +99,11 @@ struct CupcakeView_Previews: PreviewProvider {
             return order
         }()
         
-        NavigationViewWithBackground {
+        NavigationView {
             SelectCupcakeView(order: order)
         }
         
-        NavigationViewWithBackground {
+        NavigationView {
             SelectCupcakeView(order: order)
         }
         .preferredColorScheme(.dark)

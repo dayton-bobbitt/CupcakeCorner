@@ -34,13 +34,13 @@ struct FloatingButton: ViewModifier {
 
 struct FloatingButton_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationViewWithBackground {
+        NavigationView {
             Text("My floating button")
                 .modifier(FloatingButton())
                 .padding()
         }
         
-        NavigationViewWithBackground {
+        NavigationView {
             Text("My floating button")
                 .modifier(FloatingButton())
                 .padding()

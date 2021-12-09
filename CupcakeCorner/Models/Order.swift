@@ -51,10 +51,8 @@ extension Order {
         deliveryAddress = nil
     }
     
-    func remove(cartItem: CartItem) {
-        if let cartItemIndex = cart.firstIndex(where: { $0 == cartItem }) {
-            cart.remove(at: cartItemIndex)
-        }
+    func deleteCartItem(at offsets: IndexSet) {
+        self.cart.remove(atOffsets: offsets)
     }
 }
 

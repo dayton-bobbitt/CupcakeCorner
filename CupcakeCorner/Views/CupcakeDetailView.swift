@@ -7,22 +7,6 @@
 
 import SwiftUI
 
-struct AsymmetricRoundedRectangle: Shape {
-    let radius: CGFloat
-    let corners: UIRectCorner
-    
-    init(_ radius: CGFloat, corners: UIRectCorner) {
-        self.radius = radius
-        self.corners = corners
-    }
-    
-    func path(in rect: CGRect) -> Path {
-        let bezierPath = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
-        
-        return Path(bezierPath.cgPath)
-    }
-}
-
 struct CupcakeDetailView: View {
     @Environment(\.presentationMode) var presentationMode
     @Binding private var cupcake: Cupcake?

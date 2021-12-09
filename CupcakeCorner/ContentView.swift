@@ -13,7 +13,7 @@ struct ContentView: View {
     @State private var isOrdering = false
     
     var body: some View {
-        NavigationViewWithBackground {
+        NavigationView {
             ZStack {
                 Image("background")
                     .resizable()
