@@ -1,5 +1,5 @@
 //
-//  PrimaryButton.swift
+//  SecondaryButton.swift
 //  CupcakeCorner
 //
 //  Created by Dayton Bobbitt on 11/21/21.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PrimaryButton: ViewModifier {
+struct SecondaryButton: ViewModifier {
     @Environment(\.isEnabled) var isEnabled
     
     private static let cornerRadius: CGFloat = 12
@@ -18,44 +18,47 @@ struct PrimaryButton: ViewModifier {
             .foregroundColor(foregroundColor)
             .frame(maxWidth: .infinity)
             .padding()
-            .background(backgroundColor)
             .cornerRadius(Self.cornerRadius)
+            .overlay(
+                RoundedRectangle(cornerRadius: Self.cornerRadius)
+                    .stroke(borderColor, lineWidth: 1.5)
+            )
     }
     
     private var foregroundColor: Color {
-        isEnabled ? Color("ColorTextButtonPrimary") : Color("ColorTextButtonPrimaryDisabled")
+        isEnabled ? Color("ColorTextButtonSecondary") : Color("ColorTextButtonSecondaryDisabled")
     }
     
-    private var backgroundColor: Color {
-        isEnabled ? Color("ColorBackgroundButtonPrimary") : Color("ColorBackgroundButtonPrimaryDisabled")
+    private var borderColor: Color {
+        isEnabled ? Color("ColorBorderButtonSecondary") : Color("ColorBorderButtonSecondaryDisabled")
     }
 }
 
-struct PrimaryButton_Previews: PreviewProvider {
+struct SecondaryButton_Previews: PreviewProvider {
     static var previews: some View {
         NavigationViewWithBackground {
-            Text("My primary button")
-                .modifier(PrimaryButton())
+            Text("My secondary button")
+                .modifier(SecondaryButton())
                 .padding()
         }
         
         NavigationViewWithBackground {
-            Text("My primary button")
-                .modifier(PrimaryButton())
+            Text("My secondary button")
+                .modifier(SecondaryButton())
                 .disabled(true)
                 .padding()
         }
         
         Group {
             NavigationViewWithBackground {
-                Text("My primary button")
-                    .modifier(PrimaryButton())
+                Text("My secondary button")
+                    .modifier(SecondaryButton())
                     .padding()
             }
             
             NavigationViewWithBackground {
-                Text("My primary button")
-                    .modifier(PrimaryButton())
+                Text("My secondary button")
+                    .modifier(SecondaryButton())
                     .disabled(true)
                     .padding()
             }

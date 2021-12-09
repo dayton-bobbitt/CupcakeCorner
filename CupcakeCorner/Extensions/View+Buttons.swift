@@ -16,6 +16,10 @@ extension View {
         modifier(TertiaryButton())
     }
     
+    func floatingButton() -> some View {
+        modifier(FloatingButton())
+    }
+    
     func tileButton() -> some View {
         modifier(TileButton())
     }

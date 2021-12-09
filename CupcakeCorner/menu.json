@@ -4,36 +4,42 @@
             "id": "6588f6c6-f7fc-448d-8913-5999923d61a0",
             "name": "Peanut Butter",
             "imageName": "peanut-butter",
+            "description": "Nullam aliquam interdum enim. Morbi ornare gravida sapien, nec lacinia augue pharetra in.",
             "price": 2.99
         },
         {
             "id": "6e62bd5a-06ac-4ca1-b3b3-c81b382be2bd",
             "name": "Chocolate Ganache",
             "imageName": "chocolate-ganache",
+            "description": "Duis gravida iaculis est, at vulputate mauris finibus eget. Pellentesque varius ex eu vehicula lacinia.",
             "price": 2.99
         },
         {
             "id": "5138fd50-c5a4-4635-a1ff-da6a3371e76a",
             "name": "Cinnamon Sugar",
             "imageName": "cinnamon-sugar",
+            "description": "Pellentesque laoreet odio in purus tempor elementum. Sed fringilla mattis libero quis luctus.",
             "price": 2.99
         },
         {
             "id": "f7405c1f-2265-4887-ab77-e4a3b89e2eb1",
             "name": "Cookies & Cream",
             "imageName": "cookies-and-cream",
+            "description": "Vestibulum massa velit, accumsan a velit a, semper elementum erat. Vivamus cursus hendrerit suscipit.",
             "price": 2.99
         },
         {
             "id": "59f1cc84-0edc-4f2d-8a3c-08cb296a5fdb",
             "name": "Caramel Apple",
             "imageName": "caramel-apple",
+            "description": "Curabitur commodo diam non sollicitudin laoreet. Donec eget porta diam.",
             "price": 2.99
         },
         {
             "id": "6a46036b-774b-4305-9b60-7ab36b1586f6",
             "name": "Lemon",
             "imageName": "lemon",
+            "description": "Fusce sollicitudin mi ante, non lacinia purus consectetur eget. Phasellus sit amet turpis id nulla eleifend sagittis.",
             "price": 2.99
         }
     ]

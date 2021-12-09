@@ -14,30 +14,42 @@ struct ContentView: View {
     
     var body: some View {
         NavigationViewWithBackground {
-            VStack(alignment: .leading) {
-                Spacer()
+            ZStack {
+                Image("background")
+                    .resizable()
+                    .scaledToFill()
+                    .ignoresSafeArea()
+                    .blur(radius: 3)
                 
-                Text("Cupcake\nCorner")
-                    .font(.largeTitle)
-                    .foregroundColor(Color("ColorTextLargeTitle"))
+                Color("ColorBackground")
+                    .ignoresSafeArea()
+                    .opacity(0.75)
                 
-                Spacer()
-                
-                NavigationLink(destination: CupcakeView(order: order).environment(\.rootPresentationMode, $isOrdering), isActive: $isOrdering) { }
-                
-                Button {
-                    isOrdering = true
-                } label: {
-                    Text("Place an order")
-                        .primaryButton()
+                VStack(alignment: .leading) {
+                    Spacer()
+                    
+                    Text("Cupcake\nCorner")
+                        .font(.largeTitle)
+                        .foregroundColor(Color("ColorTextLargeTitle"))
+                    
+                    Spacer()
+                    
+                    NavigationLink(destination: SelectCupcakeView(order: order).environment(\.rootPresentationMode, $isOrdering), isActive: $isOrdering) { }
+                    
+                    Button {
+                        isOrdering = true
+                    } label: {
+                        Text("Place an order")
+                            .primaryButton()
+                    }
+                    
                 }
-                
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+                .onAppear {
+                    // Reset order whenever the this view appears
+                    order.reset()
             }
-            .frame(maxWidth: .infinity, alignment: .leading)
-            .padding()
-            .onAppear {
-                // Reset order whenever the this view appears
-                order.reset()
             }
         }
         .navigationViewStyle(.stack)
