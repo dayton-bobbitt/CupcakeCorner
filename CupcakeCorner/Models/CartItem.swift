@@ -10,5 +10,5 @@ import Foundation
 struct CartItem: Codable, Identifiable, Equatable {
     let id: UUID
     let cupcake: Cupcake
-    let quantity: Int
+    var quantity: Int
 }

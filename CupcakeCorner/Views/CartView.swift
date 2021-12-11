@@ -13,16 +13,8 @@ struct CartView: View {
     var body: some View {
         VStack {
             List {
-                ForEach(order.cart) { cartItem in
-                    HStack {
-                        Text(cartItem.cupcake.name)
-                        
-                        Spacer()
-                        
-                        if cartItem.quantity > 1 {
-                            Text("x \(cartItem.quantity)")
-                        }
-                    }
+                ForEach($order.cart) { $cartItem in
+                    CartItemRow(cartItem: $cartItem)
                 }
                 .onDelete(perform: order.deleteCartItem)
             }
@@ -40,6 +32,26 @@ struct CartView: View {
                     .primaryButton()
             }
             .padding()
+        }
+    }
+    
+    struct CartItemRow: View {
+        @Environment(\.editMode) var editMode
+        
+        @Binding var cartItem: CartItem
+        
+        var body: some View {
+            HStack(spacing: 16) {
+                Text("\(cartItem.cupcake.name) x \(cartItem.quantity)")
+                
+                Spacer()
+
+                if let editMode = editMode {
+                    Stepper("\(cartItem.quantity) \(cartItem.cupcake.name)", value: $cartItem.quantity, in: 1...6)
+                        .labelsHidden()
+                        .opacity(editMode.wrappedValue.isEditing ? 1 : 0)
+                }
+            }
         }
     }
 }
