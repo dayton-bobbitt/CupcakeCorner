@@ -23,7 +23,7 @@ struct CupcakeDetailView: View {
             NavigationView {
                 GeometryReader { geo in
                     ScrollView {
-                        VStack(spacing: 32) {
+                        VStack(spacing: 16) {
                             Image(cupcake.imageName)
                                 .resizable()
                                 .scaledToFill()
@@ -40,8 +40,8 @@ struct CupcakeDetailView: View {
                                     .primaryButton()
                             }
                         }
+                        .padding()
                     }
-                    .padding()
                     .navigationTitle(cupcake.name)
                     .navigationBarTitleDisplayMode(.inline)
                     .toolbar {
