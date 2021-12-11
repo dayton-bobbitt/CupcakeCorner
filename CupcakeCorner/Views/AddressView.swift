@@ -35,20 +35,20 @@ struct AddressView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack {
+                VStack(spacing: 16) {
                     TextField("Full name", text: $fullName)
                     TextField("Street", text: $streetLine1)
                     TextField("Street (optional)", text: $streetLine2)
                     TextField("City", text: $city)
                     
-                    
-                    HStack {
+                    HStack(spacing: 16) {
                         TextField("State", text: $state)
                         TextField("Zip", text: $zip)
+                            .keyboardType(.numberPad)
                     }
                 }
-                .textFieldStyle(.roundedBorder)
-                .padding(.horizontal)
+                .textFieldStyle(CustomTextFieldStyle())
+                .padding()
                 .onSubmit(saveAddress)
             }
             .navigationTitle("Delivery address")
@@ -80,13 +80,24 @@ struct AddressView: View {
     }
     
     private func saveAddress() {
-        guard isFormValid else {
+        let address = Address(fullName: fullName, streetLine1: streetLine1, streetLine2: streetLine2, city: city, state: state, zip: zip)
+        
+        guard address.isValid else {
             return
         }
         
-        order.deliveryAddress = Address(fullName: fullName, streetLine1: streetLine1, streetLine2: streetLine2, city: city, state: state, zip: zip)
+        order.deliveryAddress = address
         
         dismiss()
+    }
+}
+
+extension AddressView {
+    struct CustomTextFieldStyle: TextFieldStyle {
+        func _body(configuration: TextField<Self._Label>) -> some View {
+            configuration
+                .padding(8)
+        }
     }
 }
 
