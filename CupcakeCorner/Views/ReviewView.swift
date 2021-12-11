@@ -30,7 +30,7 @@ struct ReviewView: View {
                         
                         ForEach(order.cart) { cartItem in
                             HStack {
-                                Text(cartItem.cupcake.name)
+                                Text("\(cartItem.cupcake.name) x \(cartItem.quantity)")
                                 
                                 Spacer()
                                 
@@ -89,7 +89,7 @@ struct ReviewView: View {
                                 }
                             }
                             .padding()
-                            .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color("SecondaryColor"), lineWidth: 2))
+                            .overlay(RoundedRectangle(cornerRadius: 12).stroke(Color("ColorBackgroundButtonPrimary"), lineWidth: 2))
                         } else {
                             Button(action: showAddressView) {
                                 Text("Add a delivery address")
@@ -116,13 +116,7 @@ struct ReviewView: View {
     }
     
     private func getPrice(for cartItem: CartItem) -> String {
-        let price = NumberFormatter.formatCurrency(cartItem.cupcake.price)
-        
-        if cartItem.quantity == 1 {
-            return price
-        } else {
-            return "\(cartItem.quantity) x \(price)"
-        }
+        NumberFormatter.formatCurrency(Double(cartItem.quantity) * cartItem.cupcake.price)
     }
     
     private func showAddressView() {
