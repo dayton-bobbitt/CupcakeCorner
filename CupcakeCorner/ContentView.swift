@@ -17,13 +17,12 @@ struct ContentView: View {
             ZStack {
                 Image("background")
                     .resizable()
-                    .scaledToFill()
                     .ignoresSafeArea()
-                    .blur(radius: 3)
+                    .blur(radius: 2)
                 
                 Color("ColorBackground")
                     .ignoresSafeArea()
-                    .opacity(0.75)
+                    .opacity(0.80)
                 
                 VStack(alignment: .leading) {
                     Spacer()
